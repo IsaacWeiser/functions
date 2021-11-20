@@ -106,3 +106,61 @@ const sentence = (array) => {
 }
 
 console.log(sentence(words));
+
+// write a function that randomly determines whether you caught a tuna (33%)
+
+let tunaFishing = () => {
+    const pctNeeded = 0.33;
+    const chance = Math.random()
+
+    if (chance <= pctNeeded)
+    {
+        console.log("You hooked a tuna! :)");
+    }
+    else {
+        console.log("You came up empty-handed :(")
+    }
+}
+
+tunaFishing();
+
+console.log("rand X 0= "+ Math.random()*0);
+
+const numba =10;
+console.log("math rand times a variable: " + Math.random()*numba);
+
+//function to simulate a fast food order
+const order = (sammich, addOn, beverage, sugar) => {
+    const foodOrder = {
+        sandwhich: sammich,
+        side: addOn,
+        drink: beverage,
+        dessert: sugar
+    }
+    return foodOrder;
+}
+
+mcD = order("double cheese burger", "fries", "coke", "creampie");
+console.log('ff order: ' + mcD.sandwhich + " " + mcD.drink)
+
+//chores
+const bio = {
+    firstName: "isaac",
+    lastName: "weiser"
+}
+
+const trashduty = person => `${bio.firstName} ${bio.lastName} needs to take out the trash`;
+const dishes = person => `${bio.firstName} ${bio.lastName} needs to do the dishes`;
+const bathroom = person => `${bio.firstName} ${bio.lastName} needs to clean the bathroom`;
+const washDog = person => {return `${bio.firstName} ${bio.lastName} needs to wash the dog`};
+const dust = person => { return `${bio.firstName} ${bio.lastName} needs to dust`};
+const mop = person => { return `${bio.firstName} ${bio.lastName} needs to mop the floor`};
+console.log(trashduty(bio));
+
+const dayPlanner= (choreFunc, personObj, day) => {return `${choreFunc(personObj)} on ${day}`};
+
+console.log(dayPlanner(trashduty, bio, "monday"));
+
+const busyDay = (func1, func2, func3, person, day) => {return `on ${day}, ${func1(bio)} and ${func2(bio)} and ${func3(bio)}.`}
+
+console.log(busyDay(trashduty, dishes, mop, bio, "wednesday"));
