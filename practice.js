@@ -164,3 +164,56 @@ console.log(dayPlanner(trashduty, bio, "monday"));
 const busyDay = (func1, func2, func3, person, day) => {return `on ${day}, ${func1(bio)} and ${func2(bio)} and ${func3(bio)}.`}
 
 console.log(busyDay(trashduty, dishes, mop, bio, "wednesday"));
+
+//implicit returns, explicit returns, building objects with functions, using for of loop to access objects in arrays
+const dc = {
+    hero: "Batman",
+    villian:"joker",
+    policeOrBadAss: "Gordon",
+    Heroine: "Catwoman",
+    femmeFatale: "Harley Quinn"
+}
+const marvel = {
+    hero: "Captain America",
+    villian:"Ronald McRegan",
+    policeOrBadAss: "Nick Fury",
+    Heroine: "San Francisco",
+    femmeFatale: "Black Widow"
+}
+
+
+const metropolis = [dc, marvel];
+
+let idk = () => "thiccness";
+let whatIf = (arr) => {
+    let teamUp;
+    let p1 ="";
+    let p2="";
+    let p3="";
+
+    for (const heryo of arr){
+        if (heryo.hero.startsWith('C')===true){
+            p1 += heryo.hero + " takes on ";
+        }
+        if (heryo.villian === 'joker')
+        {
+            p2+= "the " + heryo.villian + " assisted by the dastardly ";
+        }
+        if (heryo.femmeFatale.length > 11) {
+            p3+= heryo.femmeFatale;
+        }
+}
+teamUp = p1+p2+p3;
+return teamUp;
+}
+const statement = idk;
+
+console.log(statement());
+console.log(whatIf(metropolis));
+
+const bet = [1,'A'];
+const alphabet = arate => {return {order:arate[0], letter:arate[1]}}
+console.log(alphabet(bet));
+
+const consticucktion = (object) => {return `who ruined america? It was ${object[1].villian}`}
+console.log(consticucktion(metropolis))
